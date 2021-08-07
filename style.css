@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,500&display=swap');
+
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 10px 10px;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    background: #546D64;
+    background-color: #C879FF;
+}
+
+#main{
+    width:90%;
+    background-color: #ccc;
+    margin: 50px auto;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px 2px rgb(36, 36, 36);
+}
+
+#title{
+    font-family: 'Caveat', cursive;
+    font-size:30px;
+    display:grid;
+    margin-left: 50px;
+}
+
+hr{
+    width: 90%;
+    height: 2px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+#container{
+    display: grid;
+    width: 80%;
+    margin: 0px auto;
+    grid-template-columns: 60% auto;
+    grid-template-rows:1fr;
+    grid-template-areas:
+    "content image";
+    grid-gap: 70px;
+    padding: 40px;
+
+}
+
+#img-div{
+    max-width: 100%;
+    display: grid;
+    background-color: hotpink;
+    grid-area: image;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    padding: 10px;
+    grid-gap: 10px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: gray;
+
+}
+
+#image{
+    max-width: 100%;
+    height: auto;
+    margin: 0px auto;
+    border-radius: 10px;
+}
+
+#img-caption{
+    width: 90%;
+    margin-top:0px;
+    padding-top: px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+#tribute-intro{
+    display: grid;
+    grid-area: content;
+    grid-template-columns: 1fr;
+    grid-template-rows:auto auto; 
+    grid-gap: 30px;
+}
+
+.content h4{
+    font-size: 20px;
+    margin:0;
+    color: #77498d;
+    font-weight: 500;
+    text-align: justify;
+}
+
+@media (max-width: 1024px){
+
+    #container{
+        grid-template-columns: 60% 35%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "content image"
+        "content .";
+    }
+    #tribute-intro{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows:auto auto;
+    }
+
+}
+
+@media (max-width: 768px){
+    #container{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "image"
+        "content";
+    }
+}
+
+#tribute-info{
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr;
+    width: 90%;
+    margin: 0px auto;
+}
+
+#tribute-info h2{
+    font-family: 'Caveat', cursive;
+    font-size: 40px;
+    display: grid;
+}
+
+#list-items{
+    display: grid;
+    margin: 0px auto;
+    /* background-color: #f0d1d3; */
+    list-style-type:none;
+    grid-gap: 25px;
+    margin-right: 5%;
+}
+
+#list-items span{
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 20px;
+    color: black;
+}
+
+#list-items li{
+    text-align:justify;
+    font-size: 18px;
+    color: #77498d; 
+}
+
+#footer{
+    display:flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-top: 50px;
+}
+
+#text{
+    font-size: 16px;
+}
+
+@media (max-width: 500px){
+    #footer{
+        display: flex;
+        justify-content: center;
+        margin:0;
+        text-align: justify;
+    }
+
+    #container{
+        width: 72%;
+    }
+
+    #tribute-intro h4{
+        font-size: 14px;
+        letter-spacing: 0.1px;
+    }
+
+    #img-div p{
+        font-size: 10px;
+        text-align: start;
+    }
+
+    #main{
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #tribute-info h2{
+        font-size: 35px;
+    }
+
+    #tribute-info li{
+        font-size: 14px;
+        letter-spacing: 0.1px;
+    }
+
+
+}
